@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fn"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login"
+    >
+
+    <Button
+        android:id="@+id/userbtn"
+        android:layout_width="177dp"
+        android:layout_height="52dp"
+        android:text="Next"
+        app:backgroundTint="#852196F3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.445"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.888"
+        />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="223dp"
+        android:layout_height="39dp"
+        android:background="#99FFFFFF"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Email"
+        app:layout_constraintBottom_toTopOf="@+id/area"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.427"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.854" />
+
+    <EditText
+        android:id="@+id/area"
+        android:layout_width="221dp"
+        android:layout_height="40dp"
+        android:background="#9FFFFFFF"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Area"
+        app:layout_constraintBottom_toTopOf="@+id/num"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.429"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.924" />
+
+    <EditText
+        android:id="@+id/num"
+        android:layout_width="207dp"
+        android:layout_height="43dp"
+        android:background="#8FFFFFFF"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Number"
+        app:layout_constraintBottom_toTopOf="@+id/userbtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.427"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.883"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/ln"
+        android:layout_width="227dp"
+        android:layout_height="40dp"
+        android:background="#80FFFFFF"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Last Name"
+        app:layout_constraintBottom_toTopOf="@+id/email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.427"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.866" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName7"
+        android:layout_width="230dp"
+        android:layout_height="47dp"
+        android:background="#ADE6E2E2"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:shadowColor="#74B9FF"
+        android:text="First Name"
+        android:textColor="#000000"
+        android:textColorHighlight="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/ln"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.403"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.83" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="178dp"
+        android:layout_height="42dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.422"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.497"
+        app:srcCompat="@drawable/sportify_logo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
