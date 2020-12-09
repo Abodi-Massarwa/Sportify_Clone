@@ -7,11 +7,25 @@
     android:layout_height="match_parent"
     android:background="@drawable/gym">
 
+    <EditText
+        android:id="@+id/email_edit"
+        android:layout_width="298dp"
+        android:layout_height="48dp"
+        android:background="#A8E6E2E2"
+        android:ems="10"
+        android:hint="email"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45" />
+
     <Button
         android:id="@+id/signin"
         android:layout_width="211dp"
         android:layout_height="51dp"
-        android:layout_marginBottom="160dp"
         android:text="Log in"
         android:textColor="#FFFFFF"
         android:textColorHighlight="#FFFFFF"
@@ -19,47 +33,21 @@
         app:backgroundTint="@color/teal_200"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="298dp"
-        android:layout_height="48dp"
-        android:background="#ADE6E2E2"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Password"
-        app:layout_constraintBottom_toTopOf="@+id/signin"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.897" />
-
-    <EditText
-        android:id="@+id/name"
-        android:layout_width="291dp"
-        android:layout_height="44dp"
-        android:background="#ADE6E2E2"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Username"
-        app:layout_constraintBottom_toTopOf="@+id/password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.845" />
+        app:layout_constraintVertical_bias="0.623" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="202dp"
         android:layout_height="49dp"
-        app:layout_constraintBottom_toTopOf="@+id/name"
+        app:layout_constraintBottom_toBottomOf="@+id/contact"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.311"
+        app:layout_constraintVertical_bias="0.237"
         app:srcCompat="@drawable/sportify_logo" />
 
     <TextView
@@ -70,9 +58,10 @@
         android:textColor="#FCFCFD"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.539"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signin"
-        app:layout_constraintVertical_bias="0.069" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.893" />
 
     <Button
         android:id="@+id/signup"
@@ -86,8 +75,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signin"
-        app:layout_constraintVertical_bias="0.456" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.939" />
 
     <Button
         android:id="@+id/contact"
@@ -103,4 +92,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signin"
         app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="294dp"
+        android:layout_height="40dp"
+        android:background="#95FFFFFF"
+        android:ems="10"
+        android:hint="password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.529" />
 </androidx.constraintlayout.widget.ConstraintLayout>

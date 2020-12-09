@@ -7,33 +7,48 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
-import com.example.sportify.tools.User;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.auth.FirebaseAuth;
+
 public class MainActivity extends AppCompatActivity {
-    Button Signin;
-    Button Signup;
-    EditText name;
-    EditText pass;
-    User user;
+    Button sign_in_button;
+    Button sign_up_button;
+    EditText email_edit;
+    EditText pass_edit;
+
+
+    FirebaseAuth auth = FirebaseAuth.getInstance();
+    
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Signin = (Button)findViewById(R.id.signin);
-        Signup  = (Button)findViewById(R.id.signup);
-        name= (EditText) findViewById(R.id.name);
-        pass =(EditText) findViewById(R.id.password) ;
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference();
-        //Bundle received= getIntent().getBundleExtra("User");
-        //user=(User)received.get("User"); //////
-        Signup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,SignUpActivity.class);
-                startActivity(intent);
-            }
+        setContentView(R.layout.activity_main); // login activity
+
+        email_edit =  findViewById(R.id.email_edit);
+        pass_edit = findViewById(R.id.password) ;
+        sign_in_button =findViewById(R.id.signin);
+        sign_up_button = findViewById(R.id.signup);
+
+        sign_in_button.setOnClickListener(view ->{
+            String email_text = email_edit.getText().toString().trim();
+            String password_text = pass_edit.getText().toString().trim();
+
+            auth.signInWithEmailAndPassword(email_text,password_text).addOnCompleteListener(login ->{
+                if(login.isSuccessful()) {
+                    Intent myIntent = new Intent(getApplicationContext(), productsActivity.class);
+                    startActivity(myIntent);
+                    finish();
+                }
+                else {
+                    Toast.makeText(getApplicationContext(),"Wrong email or password",Toast.LENGTH_LONG).show();
+                }
+
+            });
+        });
+        
+        sign_up_button.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this,SignUpActivity.class);
+            startActivity(intent);
         });
 
     }
