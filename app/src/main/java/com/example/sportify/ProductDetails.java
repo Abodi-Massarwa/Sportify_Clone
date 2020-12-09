@@ -25,7 +25,7 @@ public class ProductDetails{
     public ProductDetails(){
 
     }
-    public ProductDetails(String title, String details, String condition, String price, String utc) {
+    public ProductDetails(String title, String details, String condition, String price, String utc ) {
         this.title = title;
         this.details = details;
         this.condition = condition;
